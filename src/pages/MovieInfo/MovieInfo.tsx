@@ -50,6 +50,7 @@ function MovieInfo() {
                 } finally {
                     setLoading(false);
                 }
+                console.log(loading,error)
             };
     
             fetchMovieDetails();

@@ -1,4 +1,4 @@
-import { Box, Text, Button } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 import Plan from "../Home/sections/Plan"
 import Navbar from "../Components/Navbar"
 import Banner from "../Components/Banner"

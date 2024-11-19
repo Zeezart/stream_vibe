@@ -19,7 +19,6 @@ function TvshowsHero() {
         slidesToScroll: 1,
         autoplay:true,
         autoplaySpeed:5000,
-        lazyLoad: "ondemand",
         arrows: false,
         responsive:[
           {

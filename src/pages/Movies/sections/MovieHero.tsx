@@ -20,7 +20,6 @@ function MovieHero() {
         slidesToScroll: 1,
         autoplay:true,
         autoplaySpeed:5000,
-        lazyLoad: true,
         arrows: false,
         responsive:[
           {

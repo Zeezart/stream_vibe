@@ -1,7 +1,6 @@
 import {Box, Text, Image} from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 import {imagePath} from "../../../contextApi"
-import {useState} from "react"
 
 function MovieCardComponent({movieItem, type}){
 

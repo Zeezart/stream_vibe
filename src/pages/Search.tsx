@@ -15,8 +15,7 @@ function Search(){
         setSearchInput(event.target.value)
     }
 
-    function searchMovie(e){
-        e.preventDefault()
+    function searchMovie(){
         setQuery(searchInput)
         console.log(searchResults)
     }

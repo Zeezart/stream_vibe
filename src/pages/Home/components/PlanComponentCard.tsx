@@ -31,7 +31,7 @@ const plan = [
 
 
 
-function PlanComponentCard({activePlan}) {
+function PlanComponentCard({activePlan}:{activePlan: "monthly" | "yearly"}) {
     return(
            <Box display="grid" gridTemplateColumns={{base:"repeat(1,3fr)",lg:"repeat(3,1fr)"}} gap="1rem"  marginTop="2rem" color="white">
                 {
