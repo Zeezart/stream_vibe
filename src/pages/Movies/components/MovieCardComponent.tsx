@@ -2,7 +2,7 @@ import {Box, Text, Image} from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 import {imagePath} from "../../../contextApi"
 
-function MovieCardComponent({movieItem, type}){
+function MovieCardComponent({movieItem, type}:{movieItem: any,type:string}){
 
     
 

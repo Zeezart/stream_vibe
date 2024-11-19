@@ -1,4 +1,4 @@
-import { Box, Text, Button, Divider } from "@chakra-ui/react"
+import { Box, Text, Divider } from "@chakra-ui/react"
 
 function Footer() {
     return(
