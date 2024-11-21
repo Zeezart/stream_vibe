@@ -31,14 +31,12 @@ function AllMovies() {
   }
 
   const {movieData, genreData, selectedGenre, setSelectedGenre, selectedGenreMovies, page, setPage} = useMovieApi()
-  //console.log(selectedGenreMovies, selectedGenre, selectedGenreTvshows)
-  console.log(genreData)
 
  
 
   return (
     <Box
-      p={{base: "3rem", lg: "1rem 4rem", xl: "1rem 6rem"}}
+      p={{base:"1rem",sm:"1rem", md:"1rem 3rem", lg:"1rem 4rem", xl:"1rem 6rem"}} 
     >
       <Box 
         
@@ -71,7 +69,7 @@ function AllMovies() {
                       textAlign="center"
                       onClick={() => displayGenreMovies(genre.id)}
                     >
-                      <Text color="#fff" fontSize="1rem">{genre.title}</Text>
+                      <Text color="#fff" fontSize="1rem">{genre.name}</Text>
                     </Box>
                   </CarouselItem>
             ))}
