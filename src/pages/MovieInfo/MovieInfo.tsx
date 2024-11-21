@@ -123,7 +123,7 @@ function MovieInfo() {
                         alignItems="center"
                     >
                         <Image src= {`${imagePathOriginal}/${details?.posterImage}`} borderRadius="24px" width="250px"/>
-                        <Box  width={{base:"100%", md:"75%"}} m="0 auto">
+                        <Box  width={{base:"100%", md:"75%"}} m="0 auto" zIndex="1">
                             <Box m="1.5rem 0">
                                 <Text fontSize={{base:"2rem", md:"3rem"}} color="#fff" fontWeight="bold">{details?.title}</Text>
                                 {type === "movie" ? <Text fontSize="0.8rem" color="#999">{details.overview}</Text> :
@@ -144,11 +144,9 @@ function MovieInfo() {
                         position={{base:"absolute",md:"absolute"}} 
                         bottom={{base:"0", md:"-10px"}}
                         w="100%"
-                        p={{base:"3rem",lg:"1rem 6rem", xl:"1rem 6rem"}}
-                        
+                        p={{base:"3rem",lg:"1rem 6rem", xl:"1rem 6rem"}}    
                     >
-
-                        
+    
                     </Box>
                 </Box>
 
