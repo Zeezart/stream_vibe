@@ -107,18 +107,18 @@ function MovieInfo() {
 
     return(
         <Box>
-            <Box position="relative" p={{base:"3rem",lg:"1rem 4rem", xl:"1rem 6rem"}} backgroundColor="#141414">
+            <Box position="relative" p={{base:"1rem",sm:"1rem", md:"1rem 3rem", lg:"1rem 4rem", xl:"1rem 6rem"}}  backgroundColor="#141414">
                 <Navbar />
                 <Box position="relative">
                     <Box 
                         bgImage=  {`${imagePathOriginal}/${details?.bgImage}`}
                         h={{base:"80vh", md:"80vh" }} 
                         display="flex"
-                        flexDirection="row"
+                        flexDirection={{base:"column", sm:"column", md:"row", lg:"row", xl:"row"}}
                         justifyContent="space-between"
                         gap="2rem"
                         mt="2rem"
-                        p="3rem"
+                        p={{base:"1rem", sm:"1rem",md:"2rem", lg:"3rem", xl:"3rem"}}
                         borderRadius="12px"
                         alignItems="center"
                     >

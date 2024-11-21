@@ -32,8 +32,6 @@ function AllMovies() {
 
   const {movieData, genreData, selectedGenre, setSelectedGenre, selectedGenreMovies, page, setPage} = useMovieApi()
 
- 
-
   return (
     <Box
       p={{base:"1rem",sm:"1rem", md:"1rem 3rem", lg:"1rem 4rem", xl:"1rem 6rem"}} 
@@ -83,11 +81,11 @@ function AllMovies() {
         <Box display="grid" gridTemplateColumns={{base: "repeat(2, 1fr)", md: "repeat(4, 1fr)", lg: "repeat(6, 1fr)"}} gap="1rem">
           {displayAll?
             movieData && movieData.map((movieItem) => (
-              <MovieCardComponent key={movieItem.id} movieItem={movieItem} type="tv"/> 
+              <MovieCardComponent key={movieItem.id} movieItem={movieItem} type="movie"/> 
             ))
             :
             selectedGenreMovies && selectedGenreMovies.map((movieItem) => (
-              <MovieCardComponent key={movieItem.id} movieItem={movieItem} type="tv"/> 
+              <MovieCardComponent key={movieItem.id} movieItem={movieItem} type="movie"/> 
             ))    
           }
         </Box>
