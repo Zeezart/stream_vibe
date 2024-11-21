@@ -74,7 +74,7 @@ function MovieInfo() {
             fetchMovieReview();
         }, [id]);
     
-        console.log(movieDetails);
+        
     
         const details = {
             id: movieDetails?.id,
