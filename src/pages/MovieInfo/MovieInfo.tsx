@@ -112,7 +112,7 @@ function MovieInfo() {
                 <Box position="relative">
                     <Box 
                         bgImage=  {`${imagePathOriginal}/${details?.bgImage}`}
-                        h={{base:"80vh", md:"80vh" }} 
+                        h={{base:"auto", md:"80vh" }} 
                         display="flex"
                         flexDirection={{base:"column", sm:"column", md:"row", lg:"row", xl:"row"}}
                         justifyContent="space-between"
