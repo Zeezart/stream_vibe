@@ -15,7 +15,7 @@ export default function Faq(){
     }
 
     return(
-        <Box  p={{base:"3rem",lg:"1rem 4rem", xl:"1rem 6rem"}} marginTop="3rem">
+        <Box  p={{base:"1rem",sm:"1rem", md:"1rem 3rem", lg:"1rem 4rem", xl:"1rem 6rem"}} marginTop="3rem">
             <Box width="100%" display="flex" flexDirection={{base:"column", md:"row"}} gap="1rem" justifyContent="space-between" alignItems={{base:"flex-start", md:"center"}} >
                 <Box >
                     <Text fontSize={{base:"1.5rem", md:"2rem"}} color="#ffffff" fontWeight="bold">Frequently Asked Questions</Text>

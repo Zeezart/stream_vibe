@@ -9,7 +9,7 @@ function Hero() {
             <Box 
                 bgImage={heroImage} 
                 h={{base:"80vh", md:"120vh" }}
-                p={{base:"3rem",lg:"1rem 4rem", xl:"1rem 6rem"}} 
+                p={{base:"1rem",sm:"1rem", md:"1rem 3rem", lg:"1rem 4rem", xl:"1rem 6rem"}} 
                 display="flex"
                 flexDirection="column"
                 justifyContent="space-between"

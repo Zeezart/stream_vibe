@@ -97,7 +97,7 @@ function AllTvshows() {
         </Box>
 
 
-      <Box display="flex" gap="1rem" m="2rem 0">
+      <Box display={tvshowsData || selectedGenreTvshows ? "flex" : "none"} gap="1rem" m="2rem 0">
         <Box cursor="pointer" display="flex" gap="5px" alignItems="center"  color={page <= 1 ? "#BFBFBF" : "#ffffff"}>
           <ArrowLeftIcon color="#fff" boxSize="10px" />
           <Text onClick={handlePrev} >

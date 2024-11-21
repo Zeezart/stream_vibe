@@ -16,7 +16,7 @@ function DevicesComponentCard() {
 
                             <Box 
                                 bg="#0f0f0f" 
-                                p="2rem" 
+                                p= {{base:"1rem", sm:"1rem", md:"2rem", lg:"2rem", xl:"2rem"}}
                                 borderRadius="12px" 
                                 border="1px solid #262626" 
                                 textAlign="justify" 

@@ -5,7 +5,7 @@ function Explore() {
     return(
         <Box 
             position="relative" 
-            p={{base:"3rem",lg:"1rem 4rem", xl:"1rem 6rem"}}  
+            p={{base:"1rem",sm:"1rem", md:"1rem 3rem", lg:"1rem 4rem", xl:"1rem 6rem"}}  
             width="100%" mt={{base:"1rem", md: "8rem"}}
         >
             <Box width="100%" display="flex" gap="2rem" justifyContent="space-between" alignItems="center">

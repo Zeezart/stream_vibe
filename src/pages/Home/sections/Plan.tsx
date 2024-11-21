@@ -27,7 +27,7 @@ function Plan() {
   };
 
   return (
-    <Box position="relative" p={{ base: "3rem", lg: "1rem 4rem", xl: "1rem 6rem" }} mt="3rem">
+    <Box position="relative" p={{base:"1rem",sm:"1rem", md:"1rem 3rem", lg:"1rem 4rem", xl:"1rem 6rem"}} mt="3rem">
       {/* Header Section */}
       <Box
         width="100%"

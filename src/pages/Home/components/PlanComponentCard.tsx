@@ -37,19 +37,19 @@ function PlanComponentCard({activePlan}:{activePlan: "monthly" | "yearly"}) {
                 {
                     plan.map((plan) => {
                         return(
-                            <Box bg="#0f0f0f" p={{base:"2rem", md:"1rem", lg:"2rem"}} borderRadius="12px">
+                            <Box bg="#0f0f0f"  p= {{base:"1rem", sm:"1rem", md:"2rem", lg:"2rem", xl:"2rem"}} borderRadius="12px">
                                 <Box>
                                     <Text fontSize={{base:"1rem", md:"1.5rem"}} color="#fff">{plan.plan}</Text>
-                                    <Text color="#999999">{plan.detail}</Text>
+                                    <Text color="#999999" fontSize={{base:"0.8rem", md:"1rem"}}>{plan.detail}</Text>
                                 </Box>
 
                                 <Box display="flex" margin="1rem 0" alignItems="flex-start">
                                     <Text fontSize={{base:"2rem",md:"2.5rem"}} p="0" m="0">{activePlan==="monthly" ? plan.monthlyAmount : plan.yearlyAmount}</Text>
                                     <Text fontSize={{base:"1rem", md:"1.3rem"}} color="#999999">{activePlan==="monthly" ? "/month" : "/year"}</Text>
                                 </Box>
-                                <Box display="flex" justifyContent="space-between" gap="1rem">
-                                    <Button  bg="#141414" color="white" w="100%">Start Free Trial</Button>
-                                    <Button  bg="#E50000" color="white" w="100%">Choose Plan</Button>
+                                <Box display="flex" justifyContent="space-between" gap={{base:"0.6rem", md:"1rem"}}>
+                                    <Button  bg="#141414" color="white" w="100%" fontSize={{base:"0.8rem", md:"1rem"}}>Start Free Trial</Button>
+                                    <Button  bg="#E50000" color="white" w="100%" fontSize={{base:"0.8rem", md:"1rem"}}>Choose Plan</Button>
                                 </Box>
                             </Box>
                         )

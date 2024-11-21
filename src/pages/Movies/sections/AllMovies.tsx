@@ -32,6 +32,7 @@ function AllMovies() {
 
   const {movieData, genreData, selectedGenre, setSelectedGenre, selectedGenreMovies, page, setPage} = useMovieApi()
   //console.log(selectedGenreMovies, selectedGenre, selectedGenreTvshows)
+  console.log(genreData)
 
  
 
@@ -94,7 +95,7 @@ function AllMovies() {
         </Box>
 
 
-      <Box display="flex" gap="1rem" m="2rem 0">
+      <Box display={movieData || selectedGenreMovies ? "flex" : "none"} gap="1rem" m="2rem 0">
         <Box cursor="pointer" display="flex" gap="5px" alignItems="center"  color={page <= 1 ? "#BFBFBF" : "#ffffff"}>
           <ArrowLeftIcon color="#fff" boxSize="10px" />
           <Text onClick={handlePrev} >

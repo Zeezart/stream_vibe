@@ -3,7 +3,7 @@ import DevicesComponentCard from "../components/DevicesComponentCard"
 
 function Devices() {
     return(
-        <Box position="relative" p={{base:"3rem",lg:"1rem 4rem", xl:"1rem 6rem"}}>
+        <Box position="relative" p={{base:"1rem",sm:"1rem", md:"1rem 3rem", lg:"1rem 4rem", xl:"1rem 6rem"}}>
             <Box width="100%">
                 <Box>
                     <Text fontSize={{base:"1.5rem", md:"2rem"}} color="#ffffff" fontWeight="bold">We provide you streaming experiences across various devices</Text>
