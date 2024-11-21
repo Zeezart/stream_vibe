@@ -143,6 +143,7 @@ function MovieInfo() {
                         bgGradient="linear(to-t,rgba(20, 20, 20, 1),rgba(20, 20, 20, 1),rgba(20, 20, 20, 0.8),rgba(20, 20, 20, 0))"
                         position={{base:"absolute",md:"absolute"}} 
                         bottom={{base:"0", md:"-10px"}}
+                        w="100%"
                         p={{base:"3rem",lg:"1rem 6rem", xl:"1rem 6rem"}}
                         
                     >

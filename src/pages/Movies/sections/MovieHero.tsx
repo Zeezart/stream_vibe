@@ -61,6 +61,7 @@ function MovieHero() {
                                 position={{base:"absolute",md:"absolute"}} 
                                 bottom={{base:"0", md:"-50px"}}
                                 h="50vh"
+                                w="100%"
                                 p={{base:"3rem",lg:"1rem 6rem", xl:"1rem 6rem"}}
                     
                             >
