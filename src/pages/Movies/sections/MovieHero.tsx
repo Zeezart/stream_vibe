@@ -11,8 +11,6 @@ import {imagePathOriginal} from "../../../contextApi"
 function MovieHero() {
 
     const {popularMovies, loading} = useMovieApi()
-    console.log(popularMovies)
-    
 
     const settings = {
         dots: true,
