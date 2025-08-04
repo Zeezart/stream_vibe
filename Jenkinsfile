@@ -78,9 +78,9 @@ pipeline {
                 sh '''
                     set -e
                     cat $TOKEN | docker login -u zeezart --password-stdin
-                    docker tag stream-vibe:$BUILD_NUMBER stream-vibe:latest
-                    docker push stream-vibe:$BUILD_NUMBER
-                    docker push stream-vibe:latest
+                    docker tag zeezart/stream-vibe:$BUILD_NUMBER zeezart/stream-vibe:latest
+                    docker push zeezart/stream-vibe:$BUILD_NUMBER
+                    docker push zeezart/stream-vibe:latest
                 '''
                 }
             }
