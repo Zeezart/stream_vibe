@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         SCANNER_HOME = tool 'SONAR6.2'
-        IMAGE_NAME = 'stream-vibe'
+        IMAGE_NAME = 'zeezart/stream-vibe'
         TAG = "${BUILD_NUMBER}"
     }
 
