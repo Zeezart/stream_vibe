@@ -1,0 +1,79 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'NODE21' 
+    }
+
+    environment {
+        SCANNER_HOME = tool 'SONAR6.2'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Clone App Repo') {
+          steps {
+              
+            sh '''
+                rm -rf app
+                git clone --branch master https://github.com/Zeezart/stream_vibe.git
+              '''
+          }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh '''
+                    npm i
+                ''' 
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                sh 'npm test' 
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                    withSonarQubeEnv('sonarserver') {
+                        sh '''
+                            export NODE_OPTIONS=--openssl-legacy-provider
+                            ${SCANNER_HOME}/bin/sonar-scanner \
+                            -Dsonar.projectKey=stream \
+                            -Dsonar.projectName=stream \
+                            -Dsonar.sources=. \
+                            -Dsonar.exclusions=node_modules/** \
+                            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
+                            -X
+                        '''
+                    }
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+
+        stage('Deploy with Ansible') {
+            steps {
+                dir('ansible') {
+                    sh 'ansible-playbook playbook.yaml'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline finished.'
+        }
+    }
+}
