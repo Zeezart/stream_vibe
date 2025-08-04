@@ -21,7 +21,7 @@ pipeline {
           steps {
               
             sh '''
-                rm -rf app
+                rm -rf stream_vibe
                 git clone --branch master https://github.com/Zeezart/stream_vibe.git
               '''
           }
