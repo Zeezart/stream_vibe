@@ -15,7 +15,7 @@ function AllMovies() {
   const [displayAll, setDisplayAll] = useState<boolean>(true);
 
   const { movieData, genreData, selectedGenre, setSelectedGenre, selectedGenreMovies, page, setPage } = useMovieApi();
-
+  console.log(movieData)
   const carouselRef = useRef<HTMLDivElement>(null);
 
   // Handle genre selection
