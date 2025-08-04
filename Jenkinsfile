@@ -74,7 +74,7 @@ pipeline {
 
         stage('Docker Push') {
             steps {
-                withCredentials([file(credentialsId: 'dockertoken', variable: 'TOKEN_FILE')]) {
+                withCredentials([string(credentialsId: 'dockertoken', variable: 'TOKEN_FILE')]) {
                 sh '''
                     set -e
                     TOKEN=$(cat $TOKEN_FILE)
