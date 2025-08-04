@@ -77,7 +77,7 @@ pipeline {
                 withCredentials([string(credentialsId: 'dockertoken', variable: 'TOKEN')]) {
                 sh '''
                     set -e
-                    echo $TOKEN | docker login -u zeezart --password-stdin
+                    cat $TOKEN | docker login -u zeezart --password-stdin
                     docker tag stream-vibe:$BUILD_NUMBER stream-vibe:latest
                     docker push stream-vibe:$BUILD_NUMBER
                     docker push stream-vibe:latest
