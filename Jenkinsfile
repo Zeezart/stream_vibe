@@ -71,6 +71,20 @@ pipeline {
                 }
             }
         }
+
+        stage('Docker Push') {
+            steps {
+                withCredentials([file(credentialsId: 'dockertoken', variable: 'TOKEN_FILE')]) {
+                sh '''
+                    TOKEN=$(cat $TOKEN_FILE)
+                    echo $TOKEN | docker login -u zeezart --password-stdin
+                    docker tag stream-vibe:$BUILD_NUMBER stream-vibe:latest
+                    docker push stream-vibe:$BUILD_NUMBER
+                    docker push stream-vibe:latest
+                '''
+                }
+            }
+        }
     }
 
     post {
