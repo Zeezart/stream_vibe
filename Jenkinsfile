@@ -106,9 +106,9 @@
 
 
 pipeline {
-    pipelineTriggers([
+    triggers{
         githubPush()
-    ])
+    }
     
     agent any
 
