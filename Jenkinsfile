@@ -1,4 +1,7 @@
 pipeline {
+    pipelineTriggers([
+        githubPush()
+    ])
     agent any
 
     tools {
