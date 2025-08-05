@@ -9,7 +9,7 @@ import Footer from "../Components/Footer"
 
 function Home() {
     return(
-        <Box position="relative" backgroundColor="#141414" className="body">
+        <Box position="relative" backgroundColor="#000000" className="body">
             <Box width="100%">
                 <Hero />
                 <Explore />
