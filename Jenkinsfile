@@ -97,7 +97,7 @@ pipeline {
             steps {
                 sshagent (credentials: ['ec2webkey']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no ec2-user@$EC2_HOST << EOF
+                        ssh -o StrictHostKeyChecking=no ubuntu@$EC2_HOST << EOF
                           docker pull zeezart/stream-vibe:latest
                           docker stop stream-vibe || true
                           docker rm stream-vibe || true
