@@ -8,7 +8,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY dist/ /usr/share/nginx/html/
 
 # Optional: custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
