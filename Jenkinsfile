@@ -113,7 +113,7 @@ pipeline {
                             docker pull zeezart/stream-vibe:latest
                             docker stop stream-vibe || true
                             docker rm stream-vibe || true
-                            docker run -d -p 80:80 --name stream-vibe zeezart/stream-vibe:latest
+                            docker run -d -p 5173:80 --name stream-vibe zeezart/stream-vibe:latest
                         EOF
                     '''
                 }
