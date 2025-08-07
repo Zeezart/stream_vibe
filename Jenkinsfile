@@ -115,3 +115,5 @@ pipeline {
         }
     }
 }
+
+//TESTING PIPELINE AUTOMATED BUILD
