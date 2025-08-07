@@ -97,16 +97,29 @@ pipeline {
             steps {
                 sshagent (credentials: ['ec2webkey']) {
                     sh '''
-                        ssh -o StrictHostKeyChecking=no ubuntu@$EC2_HOST << EOF
-                          docker pull zeezart/stream-vibe:latest
-                          docker stop stream-vibe || true
-                          docker rm stream-vibe || true
-                          docker run -d -p 80:80 --name stream-vibe zeezart/stream-vibe:latest
+                        ssh -o StrictHostKeyChecking=no ubuntu@$EC2_HOST << 'EOF'
+                            # Update system and install Docker if not installed
+                            if ! command -v docker &> /dev/null
+                            then
+                                sudo apt update
+                                sudo apt install -y docker.io
+                                sudo usermod -aG docker ubuntu
+                            fi
+
+                            # Ensure group is refreshed
+                            newgrp docker || true
+
+                            # Pull and run the Docker container
+                            docker pull zeezart/stream-vibe:latest
+                            docker stop stream-vibe || true
+                            docker rm stream-vibe || true
+                            docker run -d -p 80:80 --name stream-vibe zeezart/stream-vibe:latest
                         EOF
                     '''
                 }
             }
         }
+
     }
 
     post {
